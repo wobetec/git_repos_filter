@@ -21,11 +21,12 @@ def get_query(keywords = [], parameters = {}):
         
         if string != "":
             query = """{
-                search(query: \"""" + f"{string}" + """\", type: REPOSITORY, first: 1) {
+                search(query: \"""" + f"{string}" + """\", type: REPOSITORY, first: 100) {
                     repositoryCount
                     nodes {
                         ... on Repository {
                             name
+                            url
                         }
                     }
                 }
@@ -34,7 +35,7 @@ def get_query(keywords = [], parameters = {}):
         else:
             return ""
 
-query = get_query(keywords = ["scientific", "experiments"], parameters={"language":"python"})
+query = get_query(keywords = ["scientific", "experiment"], parameters={"language":"python"})
 
 response = requests.post(SITE, json = {"query":query}, auth=token_auth)
 
@@ -44,3 +45,5 @@ def results(response):
 
 print(response.status_code)
 print(results(response))
+with open("result.txt", "w") as f:
+    f.write(results(response))

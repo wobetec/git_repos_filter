@@ -40,7 +40,7 @@ query = get_query(keywords = ["scientific", "experiment"], parameters={"language
 response = requests.post(SITE, json = {"query":query}, auth=token_auth)
 
 def results(response):
-    json_formated = json.dumps(response.json())
+    json_formated = json.dumps(response.json(), indent=4)
     return json_formated
 
 print(response.status_code)

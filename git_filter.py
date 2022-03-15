@@ -2,6 +2,8 @@ from webbrowser import get
 import requests
 import json
 import os
+import pandas as pd
+
 
 ACCESS_TOKEN = ""
 
@@ -22,9 +24,37 @@ class Query_string():
 
 
     def __str__(self):
+        str_keywords = " ".join(self.keywords)
+        str_parameters = ""
+        for key in self.parameters:
+            str_parameters += " {}:{}".format(key, self.parameters[key])
+
+        #search string
+        string = f"{str_keywords} {str_parameters}"
+        others = ""
+        others += ", type: REPOSITORY"
+        others += ",first: " + str(self.pag_count)
+
+        query = """{
+            search(query: \"""" + string + """\" """ + others + """ ) {
+                repositoryCount
+                pageInfo {
+                    startCursor
+                    hasPreviousPage
+                    hasNextPage
+                    endCursor
+                }
+                nodes {
+                    ... on Repository {
+                        name
+                        url
+                    }
+                }
+            }
+        }"""
+
+        return query
         
-
-
 
 class Search():
 
@@ -33,72 +63,76 @@ class Search():
 
     SITE = "https://api.github.com/graphql"
 
+
     def __init__(self):
-        pass
+        self.response = None
+        self.in_cache = False
+        pass    
 
 
-    def get_query(self, keywords = [], parameters = {}):
-        string = " ".join(keywords)
-        for key in parameters:
-            string += " {}:{}".format(key, parameters[key])
+    def get_search(self, query):
         
+        string = str(query)
         if string != "":
-            query = """{
-                search(query: \"""" + f"{string}" + """\", type: REPOSITORY, first: 1, after: \"Y3Vyc29yOjE=\") {
-                    repositoryCount
-                    pageInfo {
-                        startCursor
-                        hasPreviousPage
-                        hasNextPage
-                        endCursor
-                    }
-                    nodes {
-                        ... on Repository {
-                            name
-                            url
-                        }
-                    }
-                }
-            }"""
-            return query
-        else:
-            return ""
-
-
-    def get_search(self, keywords = [], parameters = {}):
-        query = self.get_query(keywords, parameters)
-        if query != "":
-            response = requests.post(SITE, json = {"query":query}, auth=token_auth)
+            response = requests.post(SITE, json = {"query":string}, auth=token_auth)
         else:
             response = requests.get(SITE, auth=ACCESS_TOKEN)
 
         if response.status_code != 200:
             print(f"Status code: {response.status_code}")
-            return None
+            self.response = None
         else:
-            return response
+            self.response = response.json()
+            self.to_file()
+            self.in_cache = True
+            
 
 
-    def results(self, response):
-        json_formated = json.dumps(response.json(), indent=4)
+    def results(self):
+        json_formated = json.dumps(self.response, indent=4)
         print(json_formated)
 
 
-    def to_file(self, response, file_name):
-        with open(file_name, "w") as f:
-            f.write(self.results(response))
+    def to_file(self):
+        with open("temp/result.txt", "w") as f:
+            f.write(json.dumps(self.response, indent=4))
+
+
+    def to_excel(self):
+        with open("temp/result.txt", "r") as f:
+            file = json.load(f)
+
+        dic = file["data"]["search"]["nodes"]
+
+        lista = [[item["name"], item["url"]] for item in dic]
+
+        df = pd.DataFrame(lista, columns=["name", "url"])
+
+        df.to_excel("result.xlsx", index=False)
+
+
+
+    def __str__(self):
+        if self.in_cache:
+            with open("temp/result.txt", "r") as f:
+                file = json.load(f)
+            json_formated = json.dumps(self.response, indent=4)
+            return json_formated
+        else:
+            return "Not in cache."
+        pass
 
 
 if __name__ == "__main__":
     s = Search()
 
-    keywords = ["paper", "experiments"]
+    keywords = ["scientific", "experiments"]
     parameters = {"language":"python"}
 
-    response = s.get_search(keywords, parameters)
-    s.results(response)
+    query = Query_string(keywords, parameters)
 
-    #s.to_file(response, "query2.txt")
+    s.get_search(query)
+    print(str(s))
 
     pass
 

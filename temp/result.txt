@@ -1,285 +1,160 @@
 {
     "data": {
         "search": {
-            "repositoryCount": 68,
+            "repositoryCount": 21,
             "pageInfo": {
                 "startCursor": "Y3Vyc29yOjE=",
                 "hasPreviousPage": false,
                 "hasNextPage": false,
-                "endCursor": "Y3Vyc29yOjY4"
+                "endCursor": "Y3Vyc29yOjIx"
             },
             "nodes": [
                 {
-                    "name": "pymeasure",
-                    "url": "https://github.com/pymeasure/pymeasure"
+                    "name": "noworkflow",
+                    "url": "https://github.com/gems-uff/noworkflow",
+                    "stargazers": {
+                        "totalCount": 100
+                    }
                 },
                 {
-                    "name": "pylabcontrol",
-                    "url": "https://github.com/LISE-B26/pylabcontrol"
+                    "name": "virtual_chinrest",
+                    "url": "https://github.com/QishengLi/virtual_chinrest",
+                    "stargazers": {
+                        "totalCount": 20
+                    }
                 },
                 {
-                    "name": "ScopeFoundry",
-                    "url": "https://github.com/ScopeFoundry/ScopeFoundry"
+                    "name": "jupyter-for-controls",
+                    "url": "https://github.com/nleclercq/jupyter-for-controls",
+                    "stargazers": {
+                        "totalCount": 9
+                    }
                 },
                 {
-                    "name": "autolab",
-                    "url": "https://github.com/qcha41/autolab"
+                    "name": "omicexperiment",
+                    "url": "https://github.com/bassio/omicexperiment",
+                    "stargazers": {
+                        "totalCount": 6
+                    }
                 },
                 {
-                    "name": "pymake",
-                    "url": "https://github.com/dtrckd/pymake"
+                    "name": "LiveSR",
+                    "url": "https://github.com/jlfilho/LiveSR",
+                    "stargazers": {
+                        "totalCount": 2
+                    }
                 },
                 {
-                    "name": "Nauka",
-                    "url": "https://github.com/obilaniu/Nauka"
+                    "name": "LVC",
+                    "url": "https://github.com/HybridNLP2018/LVC",
+                    "stargazers": {
+                        "totalCount": 2
+                    }
                 },
                 {
-                    "name": "forest",
-                    "url": "https://github.com/flowersteam/forest"
+                    "name": "-MBTI-Myers-Briggs-Personality-Type-Dataset",
+                    "url": "https://github.com/OmarHammemi/-MBTI-Myers-Briggs-Personality-Type-Dataset",
+                    "stargazers": {
+                        "totalCount": 2
+                    }
                 },
                 {
-                    "name": "GGTOOLS",
-                    "url": "https://github.com/lcx366/GGTOOLS"
+                    "name": "PowerSystemsScientificComputing",
+                    "url": "https://github.com/Energy-MAC/PowerSystemsScientificComputing",
+                    "stargazers": {
+                        "totalCount": 1
+                    }
                 },
                 {
-                    "name": "BlackBox",
-                    "url": "https://github.com/lalitkumarj/BlackBox"
+                    "name": "coffee-experiments",
+                    "url": "https://github.com/wannabecoffeenerd/coffee-experiments",
+                    "stargazers": {
+                        "totalCount": 1
+                    }
                 },
                 {
-                    "name": "the-turron-experiment",
-                    "url": "https://github.com/ariera/the-turron-experiment"
+                    "name": "colab_experiments",
+                    "url": "https://github.com/festa78/colab_experiments",
+                    "stargazers": {
+                        "totalCount": 1
+                    }
                 },
                 {
-                    "name": "experiments",
-                    "url": "https://github.com/mihirm05/experiments"
+                    "name": "numerical-analysis-experiments",
+                    "url": "https://github.com/ahlusar1989/numerical-analysis-experiments",
+                    "stargazers": {
+                        "totalCount": 0
+                    }
                 },
                 {
-                    "name": "experiments",
-                    "url": "https://github.com/benureau/experiments"
+                    "name": "playground",
+                    "url": "https://github.com/gil-miranda/playground",
+                    "stargazers": {
+                        "totalCount": 0
+                    }
                 },
                 {
-                    "name": "entropy-complex-networks",
-                    "url": "https://github.com/megaduks/entropy-complex-networks"
+                    "name": "computer_control",
+                    "url": "https://github.com/JPatchett/computer_control",
+                    "stargazers": {
+                        "totalCount": 0
+                    }
                 },
                 {
-                    "name": "AffectiveComputingQuantifyMeDjango",
-                    "url": "https://github.com/mitmedialab/AffectiveComputingQuantifyMeDjango"
+                    "name": "jupyter-init",
+                    "url": "https://github.com/tawalaya/jupyter-init",
+                    "stargazers": {
+                        "totalCount": 0
+                    }
                 },
                 {
-                    "name": "uib_experiments",
-                    "url": "https://github.com/miquelmn/uib_experiments"
+                    "name": "Scientific-data-Analysis",
+                    "url": "https://github.com/DianaMutekhele/Scientific-data-Analysis",
+                    "stargazers": {
+                        "totalCount": 0
+                    }
                 },
                 {
-                    "name": "machine-learning-in-scientific-experiments",
-                    "url": "https://github.com/Nebula0223/machine-learning-in-scientific-experiments"
+                    "name": "Pymaceuticals-",
+                    "url": "https://github.com/drainganggtb/Pymaceuticals-",
+                    "stargazers": {
+                        "totalCount": 0
+                    }
                 },
                 {
-                    "name": "Learning-to-understand-scientific-experiments",
-                    "url": "https://github.com/daivikswarup/Learning-to-understand-scientific-experiments"
+                    "name": "python-testing",
+                    "url": "https://github.com/jacopok/python-testing",
+                    "stargazers": {
+                        "totalCount": 0
+                    }
                 },
                 {
-                    "name": "Intelligence-for-Driving-Scientific-Experiments",
-                    "url": "https://github.com/CooolKey/Intelligence-for-Driving-Scientific-Experiments"
+                    "name": "Automatic-Relation-Extraction-from-Scientific-Wet-lab-Protocols",
+                    "url": "https://github.com/ZohaibRamzan/Automatic-Relation-Extraction-from-Scientific-Wet-lab-Protocols",
+                    "stargazers": {
+                        "totalCount": 0
+                    }
                 },
                 {
-                    "name": "GithubExperiments",
-                    "url": "https://github.com/dancehours/GithubExperiments"
+                    "name": "Credit-Card-Fraud-Detection",
+                    "url": "https://github.com/majapuh/Credit-Card-Fraud-Detection",
+                    "stargazers": {
+                        "totalCount": 0
+                    }
                 },
                 {
-                    "name": "Scientific_Glassware_Deep_Learning",
-                    "url": "https://github.com/timothygmitchell/Scientific_Glassware_Deep_Learning"
+                    "name": "House_of_MDs",
+                    "url": "https://github.com/abhiraj-mengade/House_of_MDs",
+                    "stargazers": {
+                        "totalCount": 0
+                    }
                 },
                 {
-                    "name": "vespa",
-                    "url": "https://github.com/ginomcevoy/vespa"
-                },
-                {
-                    "name": "git_repos_filter",
-                    "url": "https://github.com/wobetec/git_repos_filter"
-                },
-                {
-                    "name": "Dual-Sequence",
-                    "url": "https://github.com/ATajadod94/Dual-Sequence"
-                },
-                {
-                    "name": "paper-experiments",
-                    "url": "https://github.com/remotia/paper-experiments"
-                },
-                {
-                    "name": "experiment",
-                    "url": "https://github.com/pradal/experiment"
-                },
-                {
-                    "name": "REPRODUCE-ME",
-                    "url": "https://github.com/Sheeba-Samuel/REPRODUCE-ME"
-                },
-                {
-                    "name": "SPEXTRO",
-                    "url": "https://github.com/RIT-Space-Exploration/SPEXTRO"
-                },
-                {
-                    "name": "exlo",
-                    "url": "https://github.com/ovinc/exlo"
-                },
-                {
-                    "name": "instruments",
-                    "url": "https://github.com/geyang/instruments"
-                },
-                {
-                    "name": "ExpMeta",
-                    "url": "https://github.com/SamWolski/ExpMeta"
-                },
-                {
-                    "name": "sciencepi",
-                    "url": "https://github.com/Losaccoj/sciencepi"
-                },
-                {
-                    "name": "PyHtmlReport",
-                    "url": "https://github.com/martinResearch/PyHtmlReport"
-                },
-                {
-                    "name": "sciex",
-                    "url": "https://github.com/zkytony/sciex"
-                },
-                {
-                    "name": "multimodal-fusion-floods-tweets-meteorological",
-                    "url": "https://github.com/thiagogcosta/multimodal-fusion-floods-tweets-meteorological"
-                },
-                {
-                    "name": "vastplace",
-                    "url": "https://github.com/montavont/vastplace"
-                },
-                {
-                    "name": "Intelligent-Agents-Play-Rummy",
-                    "url": "https://github.com/Varun2101/Intelligent-Agents-Play-Rummy"
-                },
-                {
-                    "name": "concsolver",
-                    "url": "https://github.com/mast4461/concsolver"
-                },
-                {
-                    "name": "watchtower-experiment-1",
-                    "url": "https://github.com/victorcmoura/watchtower-experiment-1"
-                },
-                {
-                    "name": "Intelligent-Agents-Play-Rummy",
-                    "url": "https://github.com/kiranbodipati/Intelligent-Agents-Play-Rummy"
-                },
-                {
-                    "name": "scicfg",
-                    "url": "https://github.com/benureau/scicfg"
-                },
-                {
-                    "name": "rpistudio",
-                    "url": "https://github.com/nicodds/rpistudio"
-                },
-                {
-                    "name": "metro-sci",
-                    "url": "https://github.com/philsmt/metro-sci"
-                },
-                {
-                    "name": "channel",
-                    "url": "https://github.com/Zheka001/channel"
-                },
-                {
-                    "name": "explot",
-                    "url": "https://github.com/bjoernwe/explot"
-                },
-                {
-                    "name": "Experiment",
-                    "url": "https://github.com/CaesarReceptorLight/Experiment"
-                },
-                {
-                    "name": "data-science-stack",
-                    "url": "https://github.com/kumarlokesh/data-science-stack"
-                },
-                {
-                    "name": "experiment-repository",
-                    "url": "https://github.com/heikomuller/experiment-repository"
-                },
-                {
-                    "name": "Automatic_HTML_reports",
-                    "url": "https://github.com/manyu90/Automatic_HTML_reports"
-                },
-                {
-                    "name": "stimulated_emission_imaging",
-                    "url": "https://github.com/AndrewGYork/stimulated_emission_imaging"
-                },
-                {
-                    "name": "SciARG",
-                    "url": "https://github.com/LaSTUS-TALN-UPF/SciARG"
-                },
-                {
-                    "name": "Goettingen-High-Performance-Scientific-Computing-Research",
-                    "url": "https://github.com/Albert-Z-Guo/Goettingen-High-Performance-Scientific-Computing-Research"
-                },
-                {
-                    "name": "bob.pipelines",
-                    "url": "https://github.com/bioidiap/bob.pipelines"
-                },
-                {
-                    "name": "aspi",
-                    "url": "https://github.com/coderdojo-futurix/aspi"
-                },
-                {
-                    "name": "rucio-fnal",
-                    "url": "https://github.com/bjwhite-fnal/rucio-fnal"
-                },
-                {
-                    "name": "pdfssa4met",
-                    "url": "https://github.com/Astromis/pdfssa4met"
-                },
-                {
-                    "name": "ProvTrack",
-                    "url": "https://github.com/CaesarReceptorLight/ProvTrack"
-                },
-                {
-                    "name": "BSS-Project",
-                    "url": "https://github.com/MichalTesnar/BSS-Project"
-                },
-                {
-                    "name": "II2202-Research-Quantum-ML-Sanvito-Stuart",
-                    "url": "https://github.com/Alexdruso/II2202-Research-Quantum-ML-Sanvito-Stuart"
-                },
-                {
-                    "name": "Research-Project---Risk-Averse-Non-Stationary-Bandits",
-                    "url": "https://github.com/LeoBenac/Research-Project---Risk-Averse-Non-Stationary-Bandits"
-                },
-                {
-                    "name": "Hypothesis-driven-experiment-design-with-SEDML-extension",
-                    "url": "https://github.com/semacammetu/Hypothesis-driven-experiment-design-with-SEDML-extension"
-                },
-                {
-                    "name": "projectderdio",
-                    "url": "https://github.com/HonzaSlavik/projectderdio"
-                },
-                {
-                    "name": "HAB-Experiment",
-                    "url": "https://github.com/Rutele/HAB-Experiment"
-                },
-                {
-                    "name": "sci_met_dispenser_attention",
-                    "url": "https://github.com/chrillemanden/sci_met_dispenser_attention"
-                },
-                {
-                    "name": "Bokeh-Django-based-Instrumetation-control",
-                    "url": "https://github.com/vishnuiot/Bokeh-Django-based-Instrumetation-control"
-                },
-                {
-                    "name": "Probability_Calculator",
-                    "url": "https://github.com/ZichKoding/Probability_Calculator"
-                },
-                {
-                    "name": "Classification-of-Journal-Abstracts-into-Categories",
-                    "url": "https://github.com/jaspal13/Classification-of-Journal-Abstracts-into-Categories"
-                },
-                {
-                    "name": "ziHF2_ch2_harmonic2",
-                    "url": "https://github.com/glatzii/ziHF2_ch2_harmonic2"
-                },
-                {
-                    "name": "Next-Generation-Sequencing",
-                    "url": "https://github.com/xmkrohannon/Next-Generation-Sequencing"
+                    "name": "Buffer-Calculator",
+                    "url": "https://github.com/retyper/Buffer-Calculator",
+                    "stargazers": {
+                        "totalCount": 0
+                    }
                 }
             ]
         }

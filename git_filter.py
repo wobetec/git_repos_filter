@@ -17,17 +17,18 @@ def token_auth(request):
 
 class Query_string():
 
-    def __init__(self, keywords = [], parameters = {}, pag_count = 100):
+    def __init__(self, keywords = [], parameters = {}, pag_count = 100, all_pages = False):
         self.keywords = keywords
         self.parameters = parameters
-        self.pag_count = pag_count
+        self.all_pages = all_pages
+        self.pag_count = 1000 if all_pages else pag_count
 
 
     def __str__(self):
         str_keywords = " ".join(self.keywords)
         str_parameters = ""
         for key in self.parameters:
-            str_parameters += " {}:{}".format(key, self.parameters[key])
+            str_parameters += """ {}:\\"{}\\" """.format(key, self.parameters[key])
 
         #search string
         string = f"{str_keywords} {str_parameters}"
@@ -46,12 +47,15 @@ class Query_string():
                 }
                 nodes {
                     ... on Repository {
-                        name
-                        url
+                            name
+                            url
+                            stargazers {
+                                totalCount
+                            }
+                        }
                     }
                 }
-            }
-        }"""
+            }"""
 
         return query
         
@@ -73,6 +77,7 @@ class Search():
     def get_search(self, query):
         
         string = str(query)
+        
         if string != "":
             response = requests.post(SITE, json = {"query":string}, auth=token_auth)
         else:
@@ -82,10 +87,25 @@ class Search():
             print(f"Status code: {response.status_code}")
             self.response = None
         else:
+
             self.response = response.json()
+
+            if self.response["data"]["search"]["pageInfo"]["hasNextPage"] and self:
+                self.get_all_pages(query)
+
             self.to_file()
             self.in_cache = True
-            
+
+    
+    def get_all_pages(self, query):
+
+        pass
+    
+    def sort_repos_stars(self):
+        nodes = self.response["data"]["search"]["nodes"]
+        new_list = sorted(nodes, key=lambda node: node["stargazers"]["totalCount"], reverse=True)
+        self.response["data"]["search"]["nodes"] = new_list
+        self.to_file()
 
 
     def results(self):
@@ -127,12 +147,13 @@ if __name__ == "__main__":
     s = Search()
 
     keywords = ["scientific", "experiments"]
-    parameters = {"language":"python"}
+    parameters = {"language":"Jupyter Notebook"}
 
-    query = Query_string(keywords, parameters)
+    query = Query_string(keywords, parameters, pag_count=100)
 
     s.get_search(query)
-    print(str(s))
+    s.sort_repos_stars()
+    #print(str(s))
 
     pass
 

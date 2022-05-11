@@ -1,0 +1,715 @@
+{
+    "data": {
+        "search": {
+            "repositoryCount": 567,
+            "pageInfo": {
+                "startCursor": "Y3Vyc29yOjE=",
+                "hasPreviousPage": false,
+                "hasNextPage": true,
+                "endCursor": "Y3Vyc29yOjEwMA=="
+            },
+            "nodes": [
+                {
+                    "name": "task_oriented_dialogue_as_dataflow_synthesis",
+                    "url": "https://github.com/microsoft/task_oriented_dialogue_as_dataflow_synthesis",
+                    "stargazers": {
+                        "totalCount": 259
+                    }
+                },
+                {
+                    "name": "safety-starter-agents",
+                    "url": "https://github.com/openai/safety-starter-agents",
+                    "stargazers": {
+                        "totalCount": 221
+                    }
+                },
+                {
+                    "name": "textvae",
+                    "url": "https://github.com/ssemeniuta/textvae",
+                    "stargazers": {
+                        "totalCount": 199
+                    }
+                },
+                {
+                    "name": "self-ensemble-visual-domain-adapt",
+                    "url": "https://github.com/Britefury/self-ensemble-visual-domain-adapt",
+                    "stargazers": {
+                        "totalCount": 179
+                    }
+                },
+                {
+                    "name": "holographic-embeddings",
+                    "url": "https://github.com/mnick/holographic-embeddings",
+                    "stargazers": {
+                        "totalCount": 172
+                    }
+                },
+                {
+                    "name": "metalearn-leap",
+                    "url": "https://github.com/amzn/metalearn-leap",
+                    "stargazers": {
+                        "totalCount": 147
+                    }
+                },
+                {
+                    "name": "maua-stylegan2",
+                    "url": "https://github.com/JCBrouwer/maua-stylegan2",
+                    "stargazers": {
+                        "totalCount": 143
+                    }
+                },
+                {
+                    "name": "NAF",
+                    "url": "https://github.com/CW-Huang/NAF",
+                    "stargazers": {
+                        "totalCount": 110
+                    }
+                },
+                {
+                    "name": "talkthewalk",
+                    "url": "https://github.com/facebookresearch/talkthewalk",
+                    "stargazers": {
+                        "totalCount": 107
+                    }
+                },
+                {
+                    "name": "CapsNet-tensorflow",
+                    "url": "https://github.com/InnerPeace-Wu/CapsNet-tensorflow",
+                    "stargazers": {
+                        "totalCount": 77
+                    }
+                },
+                {
+                    "name": "CoT",
+                    "url": "https://github.com/desire2020/CoT",
+                    "stargazers": {
+                        "totalCount": 74
+                    }
+                },
+                {
+                    "name": "self-ensemble-visual-domain-adapt-photo",
+                    "url": "https://github.com/Britefury/self-ensemble-visual-domain-adapt-photo",
+                    "stargazers": {
+                        "totalCount": 71
+                    }
+                },
+                {
+                    "name": "OpenBookQA",
+                    "url": "https://github.com/allenai/OpenBookQA",
+                    "stargazers": {
+                        "totalCount": 71
+                    }
+                },
+                {
+                    "name": "curriculum_learning",
+                    "url": "https://github.com/GuyHacohen/curriculum_learning",
+                    "stargazers": {
+                        "totalCount": 69
+                    }
+                },
+                {
+                    "name": "anchor-experiments",
+                    "url": "https://github.com/marcotcr/anchor-experiments",
+                    "stargazers": {
+                        "totalCount": 54
+                    }
+                },
+                {
+                    "name": "VariationalDeepSemanticHashing",
+                    "url": "https://github.com/unsuthee/VariationalDeepSemanticHashing",
+                    "stargazers": {
+                        "totalCount": 53
+                    }
+                },
+                {
+                    "name": "adversarially-motivated-intrinsic-goals",
+                    "url": "https://github.com/facebookresearch/adversarially-motivated-intrinsic-goals",
+                    "stargazers": {
+                        "totalCount": 52
+                    }
+                },
+                {
+                    "name": "yolov2",
+                    "url": "https://github.com/datlife/yolov2",
+                    "stargazers": {
+                        "totalCount": 49
+                    }
+                },
+                {
+                    "name": "vqa-outliers",
+                    "url": "https://github.com/siddk/vqa-outliers",
+                    "stargazers": {
+                        "totalCount": 47
+                    }
+                },
+                {
+                    "name": "2019-ZJU_SummerResearch",
+                    "url": "https://github.com/water-wbq/2019-ZJU_SummerResearch",
+                    "stargazers": {
+                        "totalCount": 46
+                    }
+                },
+                {
+                    "name": "Hierarchical-Typing",
+                    "url": "https://github.com/MurtyShikhar/Hierarchical-Typing",
+                    "stargazers": {
+                        "totalCount": 43
+                    }
+                },
+                {
+                    "name": "neural-flows-experiments",
+                    "url": "https://github.com/mbilos/neural-flows-experiments",
+                    "stargazers": {
+                        "totalCount": 42
+                    }
+                },
+                {
+                    "name": "Learning-From-Rules",
+                    "url": "https://github.com/awasthiabhijeet/Learning-From-Rules",
+                    "stargazers": {
+                        "totalCount": 42
+                    }
+                },
+                {
+                    "name": "sonode",
+                    "url": "https://github.com/a-norcliffe/sonode",
+                    "stargazers": {
+                        "totalCount": 39
+                    }
+                },
+                {
+                    "name": "end2endlobesegmentation",
+                    "url": "https://github.com/filipetrocadoferreira/end2endlobesegmentation",
+                    "stargazers": {
+                        "totalCount": 38
+                    }
+                },
+                {
+                    "name": "BackpropThroughTheVoidRL",
+                    "url": "https://github.com/wgrathwohl/BackpropThroughTheVoidRL",
+                    "stargazers": {
+                        "totalCount": 38
+                    }
+                },
+                {
+                    "name": "wsd-biencoders",
+                    "url": "https://github.com/facebookresearch/wsd-biencoders",
+                    "stargazers": {
+                        "totalCount": 38
+                    }
+                },
+                {
+                    "name": "airfoil-opt-gan",
+                    "url": "https://github.com/IDEALLab/airfoil-opt-gan",
+                    "stargazers": {
+                        "totalCount": 35
+                    }
+                },
+                {
+                    "name": "BMCNNwHFCs",
+                    "url": "https://github.com/AdamByerly/BMCNNwHFCs",
+                    "stargazers": {
+                        "totalCount": 34
+                    }
+                },
+                {
+                    "name": "rumour-classification",
+                    "url": "https://github.com/mlukasik/rumour-classification",
+                    "stargazers": {
+                        "totalCount": 33
+                    }
+                },
+                {
+                    "name": "BOSS",
+                    "url": "https://github.com/lnsmith54/BOSS",
+                    "stargazers": {
+                        "totalCount": 33
+                    }
+                },
+                {
+                    "name": "box_embeddings",
+                    "url": "https://github.com/Lorraine333/box_embeddings",
+                    "stargazers": {
+                        "totalCount": 32
+                    }
+                },
+                {
+                    "name": "cocottributes",
+                    "url": "https://github.com/genp/cocottributes",
+                    "stargazers": {
+                        "totalCount": 32
+                    }
+                },
+                {
+                    "name": "unified-embedding",
+                    "url": "https://github.com/MahdiHajibabaei/unified-embedding",
+                    "stargazers": {
+                        "totalCount": 31
+                    }
+                },
+                {
+                    "name": "GeneralizationAndStabilityInGANs",
+                    "url": "https://github.com/htt210/GeneralizationAndStabilityInGANs",
+                    "stargazers": {
+                        "totalCount": 31
+                    }
+                },
+                {
+                    "name": "xformer-multi-source-domain-adaptation",
+                    "url": "https://github.com/copenlu/xformer-multi-source-domain-adaptation",
+                    "stargazers": {
+                        "totalCount": 30
+                    }
+                },
+                {
+                    "name": "RTFM",
+                    "url": "https://github.com/facebookresearch/RTFM",
+                    "stargazers": {
+                        "totalCount": 30
+                    }
+                },
+                {
+                    "name": "why-clipping-accelerates",
+                    "url": "https://github.com/JingzhaoZhang/why-clipping-accelerates",
+                    "stargazers": {
+                        "totalCount": 30
+                    }
+                },
+                {
+                    "name": "vnn-neural-implicits",
+                    "url": "https://github.com/FlyingGiraffe/vnn-neural-implicits",
+                    "stargazers": {
+                        "totalCount": 29
+                    }
+                },
+                {
+                    "name": "Word_Mover_Distance",
+                    "url": "https://github.com/PragmaticLab/Word_Mover_Distance",
+                    "stargazers": {
+                        "totalCount": 25
+                    }
+                },
+                {
+                    "name": "hyper-representation",
+                    "url": "https://github.com/prolearner/hyper-representation",
+                    "stargazers": {
+                        "totalCount": 25
+                    }
+                },
+                {
+                    "name": "seqhawkes",
+                    "url": "https://github.com/mlukasik/seqhawkes",
+                    "stargazers": {
+                        "totalCount": 24
+                    }
+                },
+                {
+                    "name": "Dialogue-State-Tracking-using-LSTM",
+                    "url": "https://github.com/TakuyaHiraoka/Dialogue-State-Tracking-using-LSTM",
+                    "stargazers": {
+                        "totalCount": 23
+                    }
+                },
+                {
+                    "name": "zuco-nlp",
+                    "url": "https://github.com/DS3Lab/zuco-nlp",
+                    "stargazers": {
+                        "totalCount": 23
+                    }
+                },
+                {
+                    "name": "MusicGenreTranslation",
+                    "url": "https://github.com/deezer/MusicGenreTranslation",
+                    "stargazers": {
+                        "totalCount": 23
+                    }
+                },
+                {
+                    "name": "differential-privacy-bayesian-optimization",
+                    "url": "https://github.com/amzn/differential-privacy-bayesian-optimization",
+                    "stargazers": {
+                        "totalCount": 21
+                    }
+                },
+                {
+                    "name": "nnpu_tf",
+                    "url": "https://github.com/GarrettLee/nnpu_tf",
+                    "stargazers": {
+                        "totalCount": 20
+                    }
+                },
+                {
+                    "name": "MAMe-baselines",
+                    "url": "https://github.com/HPAI-BSC/MAMe-baselines",
+                    "stargazers": {
+                        "totalCount": 18
+                    }
+                },
+                {
+                    "name": "gam_rhn",
+                    "url": "https://github.com/WilliamRo/gam_rhn",
+                    "stargazers": {
+                        "totalCount": 17
+                    }
+                },
+                {
+                    "name": "Open-Vocabulary-Learning-on-Source-Code-with-a-Graph-Structured-Cache",
+                    "url": "https://github.com/mwcvitkovic/Open-Vocabulary-Learning-on-Source-Code-with-a-Graph-Structured-Cache",
+                    "stargazers": {
+                        "totalCount": 17
+                    }
+                },
+                {
+                    "name": "gumbel-relatives",
+                    "url": "https://github.com/matejbalog/gumbel-relatives",
+                    "stargazers": {
+                        "totalCount": 16
+                    }
+                },
+                {
+                    "name": "squad_rasor_nn",
+                    "url": "https://github.com/hsgodhia/squad_rasor_nn",
+                    "stargazers": {
+                        "totalCount": 16
+                    }
+                },
+                {
+                    "name": "semantic_parsing_with_constrained_lm",
+                    "url": "https://github.com/microsoft/semantic_parsing_with_constrained_lm",
+                    "stargazers": {
+                        "totalCount": 16
+                    }
+                },
+                {
+                    "name": "adversarial-detection",
+                    "url": "https://github.com/jayaram-r/adversarial-detection",
+                    "stargazers": {
+                        "totalCount": 14
+                    }
+                },
+                {
+                    "name": "GeomPickPlace",
+                    "url": "https://github.com/mgualti/GeomPickPlace",
+                    "stargazers": {
+                        "totalCount": 14
+                    }
+                },
+                {
+                    "name": "word2vec-translation-matrix",
+                    "url": "https://github.com/n8686025/word2vec-translation-matrix",
+                    "stargazers": {
+                        "totalCount": 14
+                    }
+                },
+                {
+                    "name": "aicp",
+                    "url": "https://github.com/juangamella/aicp",
+                    "stargazers": {
+                        "totalCount": 14
+                    }
+                },
+                {
+                    "name": "Towards-reliable-BioNER",
+                    "url": "https://github.com/BaderLab/Towards-reliable-BioNER",
+                    "stargazers": {
+                        "totalCount": 14
+                    }
+                },
+                {
+                    "name": "entity-matching-transformer",
+                    "url": "https://github.com/brunnurs/entity-matching-transformer",
+                    "stargazers": {
+                        "totalCount": 13
+                    }
+                },
+                {
+                    "name": "HEX_experiments",
+                    "url": "https://github.com/HaohanWang/HEX_experiments",
+                    "stargazers": {
+                        "totalCount": 13
+                    }
+                },
+                {
+                    "name": "Structured-Self-Attentive-Sentence-Embedding",
+                    "url": "https://github.com/kenjewu/Structured-Self-Attentive-Sentence-Embedding",
+                    "stargazers": {
+                        "totalCount": 13
+                    }
+                },
+                {
+                    "name": "gnosis",
+                    "url": "https://github.com/samuelstanton/gnosis",
+                    "stargazers": {
+                        "totalCount": 13
+                    }
+                },
+                {
+                    "name": "stochasticity_in_neural_ode",
+                    "url": "https://github.com/AlexandraVolokhova/stochasticity_in_neural_ode",
+                    "stargazers": {
+                        "totalCount": 12
+                    }
+                },
+                {
+                    "name": "metapheno",
+                    "url": "https://github.com/nlapier2/metapheno",
+                    "stargazers": {
+                        "totalCount": 12
+                    }
+                },
+                {
+                    "name": "Tensor-LSTM",
+                    "url": "https://github.com/MichSchli/Tensor-LSTM",
+                    "stargazers": {
+                        "totalCount": 12
+                    }
+                },
+                {
+                    "name": "Dicod",
+                    "url": "https://github.com/tomMoral/Dicod",
+                    "stargazers": {
+                        "totalCount": 12
+                    }
+                },
+                {
+                    "name": "coegan",
+                    "url": "https://github.com/vfcosta/coegan",
+                    "stargazers": {
+                        "totalCount": 11
+                    }
+                },
+                {
+                    "name": "code_2020ICASSP_iss",
+                    "url": "https://github.com/onolab-tmu/code_2020ICASSP_iss",
+                    "stargazers": {
+                        "totalCount": 11
+                    }
+                },
+                {
+                    "name": "mmdagg-paper",
+                    "url": "https://github.com/antoninschrab/mmdagg-paper",
+                    "stargazers": {
+                        "totalCount": 11
+                    }
+                },
+                {
+                    "name": "continuous-n-gram-AA",
+                    "url": "https://github.com/yunitata/continuous-n-gram-AA",
+                    "stargazers": {
+                        "totalCount": 10
+                    }
+                },
+                {
+                    "name": "patmat-run",
+                    "url": "https://github.com/UNSW-database/patmat-run",
+                    "stargazers": {
+                        "totalCount": 10
+                    }
+                },
+                {
+                    "name": "MultilingualMusicGenreEmbedding",
+                    "url": "https://github.com/deezer/MultilingualMusicGenreEmbedding",
+                    "stargazers": {
+                        "totalCount": 10
+                    }
+                },
+                {
+                    "name": "GeneticProgrammingTradingExperiments",
+                    "url": "https://github.com/jmberutich/GeneticProgrammingTradingExperiments",
+                    "stargazers": {
+                        "totalCount": 9
+                    }
+                },
+                {
+                    "name": "snaptron-experiments",
+                    "url": "https://github.com/ChristopherWilks/snaptron-experiments",
+                    "stargazers": {
+                        "totalCount": 9
+                    }
+                },
+                {
+                    "name": "CDAAE",
+                    "url": "https://github.com/luckycallor/CDAAE",
+                    "stargazers": {
+                        "totalCount": 9
+                    }
+                },
+                {
+                    "name": "Active-Learning-for-Example-based-Dialog-Systems",
+                    "url": "https://github.com/TakuyaHiraoka/Active-Learning-for-Example-based-Dialog-Systems",
+                    "stargazers": {
+                        "totalCount": 9
+                    }
+                },
+                {
+                    "name": "resgait",
+                    "url": "https://github.com/zihaomu/resgait",
+                    "stargazers": {
+                        "totalCount": 9
+                    }
+                },
+                {
+                    "name": "RecSys21_DIB",
+                    "url": "https://github.com/dgliu/RecSys21_DIB",
+                    "stargazers": {
+                        "totalCount": 9
+                    }
+                },
+                {
+                    "name": "dmelodies_controllability",
+                    "url": "https://github.com/ashispati/dmelodies_controllability",
+                    "stargazers": {
+                        "totalCount": 9
+                    }
+                },
+                {
+                    "name": "POD-Galerkin_MHD",
+                    "url": "https://github.com/akaptano/POD-Galerkin_MHD",
+                    "stargazers": {
+                        "totalCount": 9
+                    }
+                },
+                {
+                    "name": "dirl",
+                    "url": "https://github.com/keyshor/dirl",
+                    "stargazers": {
+                        "totalCount": 8
+                    }
+                },
+                {
+                    "name": "Learning-Robust-Options-by-Conditional-Value-at-Risk-Optimization",
+                    "url": "https://github.com/TakuyaHiraoka/Learning-Robust-Options-by-Conditional-Value-at-Risk-Optimization",
+                    "stargazers": {
+                        "totalCount": 8
+                    }
+                },
+                {
+                    "name": "spectrl_tool",
+                    "url": "https://github.com/keyshor/spectrl_tool",
+                    "stargazers": {
+                        "totalCount": 8
+                    }
+                },
+                {
+                    "name": "sinkhorn-imitation",
+                    "url": "https://github.com/gpapagiannis/sinkhorn-imitation",
+                    "stargazers": {
+                        "totalCount": 8
+                    }
+                },
+                {
+                    "name": "Scalable-PaQL-Queries",
+                    "url": "https://github.com/matteo-brucato/Scalable-PaQL-Queries",
+                    "stargazers": {
+                        "totalCount": 8
+                    }
+                },
+                {
+                    "name": "sibling-rivalry",
+                    "url": "https://github.com/salesforce/sibling-rivalry",
+                    "stargazers": {
+                        "totalCount": 7
+                    }
+                },
+                {
+                    "name": "modular-loss-experiments",
+                    "url": "https://github.com/grey-area/modular-loss-experiments",
+                    "stargazers": {
+                        "totalCount": 7
+                    }
+                },
+                {
+                    "name": "MASS-Learning",
+                    "url": "https://github.com/mwcvitkovic/MASS-Learning",
+                    "stargazers": {
+                        "totalCount": 7
+                    }
+                },
+                {
+                    "name": "clusterz",
+                    "url": "https://github.com/xyguo/clusterz",
+                    "stargazers": {
+                        "totalCount": 7
+                    }
+                },
+                {
+                    "name": "vla",
+                    "url": "https://github.com/Stanford-ILIAD/vla",
+                    "stargazers": {
+                        "totalCount": 7
+                    }
+                },
+                {
+                    "name": "lagrangian-rl",
+                    "url": "https://github.com/pierrelux/lagrangian-rl",
+                    "stargazers": {
+                        "totalCount": 7
+                    }
+                },
+                {
+                    "name": "Uncertainty4VerificationModels",
+                    "url": "https://github.com/kochkinaelena/Uncertainty4VerificationModels",
+                    "stargazers": {
+                        "totalCount": 7
+                    }
+                },
+                {
+                    "name": "LazyIter",
+                    "url": "https://github.com/teshnizi/LazyIter",
+                    "stargazers": {
+                        "totalCount": 7
+                    }
+                },
+                {
+                    "name": "Protocol-Benchmarks",
+                    "url": "https://github.com/Mytherin/Protocol-Benchmarks",
+                    "stargazers": {
+                        "totalCount": 7
+                    }
+                },
+                {
+                    "name": "DeCAF",
+                    "url": "https://github.com/anikristo/DeCAF",
+                    "stargazers": {
+                        "totalCount": 6
+                    }
+                },
+                {
+                    "name": "inductive-pooling",
+                    "url": "https://github.com/HUJI-Deep/inductive-pooling",
+                    "stargazers": {
+                        "totalCount": 6
+                    }
+                },
+                {
+                    "name": "treeVAE-reproducibility",
+                    "url": "https://github.com/khalilouardini/treeVAE-reproducibility",
+                    "stargazers": {
+                        "totalCount": 6
+                    }
+                },
+                {
+                    "name": "sage-experiments",
+                    "url": "https://github.com/iancovert/sage-experiments",
+                    "stargazers": {
+                        "totalCount": 6
+                    }
+                },
+                {
+                    "name": "density-based-weighting-for-imbalanced-regression",
+                    "url": "https://github.com/SteiMi/density-based-weighting-for-imbalanced-regression",
+                    "stargazers": {
+                        "totalCount": 6
+                    }
+                },
+                {
+                    "name": "An-Information-theoretic-Metric-of-Transferability",
+                    "url": "https://github.com/YaojieBao/An-Information-theoretic-Metric-of-Transferability",
+                    "stargazers": {
+                        "totalCount": 6
+                    }
+                }
+            ]
+        }
+    }
+}

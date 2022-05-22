@@ -19,6 +19,8 @@ class Query():
         self.pag_count = 100 if all_pages else pag_count
         self.others = others
 
+        self.metadata = self.getMetadata()
+
 
     def __str__(self):
         key_in = [f"""\\"{x}\\" """ for x in self.keywords["include"]]
@@ -69,3 +71,20 @@ class Query():
         Função necesaria para percorrer todas as páginas
         """
         self.others["after"] = str(last_index)
+
+
+    def getMetadata(self):
+        dic = {
+            "keywords-include": ", ".join(self.keywords["include"]),
+            "keywords-exclude": ", ".join(self.keywords["exclude"]),
+            "parameters-include": ", ".join([f"{x}:{self.parameters['include'][x]}" for x in self.parameters['include']]),
+            "parameters-exclude": ", ".join([f"{x}:{self.parameters['exclude'][x]}" for x in self.parameters['exclude']]),
+            "Total": None, 
+            "Utilizados": None, 
+            "Data": None, 
+            "Criterio de separacao": None,
+        }
+        return dic
+    
+    def returnMetadata(self):
+        return self.metadata

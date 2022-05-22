@@ -1,7 +1,6 @@
-
-import pandas as pd
 from modules.query import Query
 from modules.search import Search
+from modules.results import Result
 
 
 if __name__ == "__main__":
@@ -10,16 +9,14 @@ if __name__ == "__main__":
     keywords = {"include":["bioinformatics"], "exclude":[]}
     parameters = {"include":{"language":"python"}, "exclude":{}}
 
-    query = Query(keywords, parameters, pag_count=1, all_pages = False)
+    query = Query(keywords, parameters, pag_count=100, all_pages = False)
+    
     s.get_search(query)
+    r = Result(s)
 
-    try:
-        print(s.response["data"]["search"]["repositoryCount"])
-    except:
-        pass
-    pass
+    print(r.manipulated["data"]["search"]["repositoryCount"])
+    r.toJson("./results/result.json")
+    r.toExcel("./results/result.xlsx")
 
-    #s.sort_repos_stars() #ordena a busca por stars
-    #s.get_firsts(100) #pega apenas os n primieros da busca
-    #s.to_excel() #salva a busca em um .xlsx
+
 

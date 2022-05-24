@@ -1,0 +1,19 @@
+{
+    "query":{
+        "keywords": {"include":["paper", "experiments"], "exclude":[]},
+        "parameters": {"include":{"language":"python"}, "exclude":{}},
+        "pag_count": 1,
+        "all_pages": false,
+        "more_filters": "",
+        "others": {}
+    },
+    "results":{
+        "first":{
+            "data":{}
+        },
+        "empity 1":{},
+        "empity 2":{},
+        "empity 3":{},
+        "empity 4":{}
+    }
+}

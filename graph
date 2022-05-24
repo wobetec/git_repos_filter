@@ -1,0 +1,26 @@
+query:
+* create (Pyinquer)
+* edit (Pyinquer)
+    keywords include
+    keywords exclude
+    parameters
+    parameters
+    pag_count
+    all_pages
+    more filters
+    others
+
+
+* remove (command line)
+* see (comand line)
+
+
+Search
+* do (command line)
+
+
+Results
+* save json (command line)
+* save Excel (command line)
+* see (comand line)
+* format, slice, filter... (Pyinquer)

@@ -85,6 +85,34 @@ class Query():
             "Criterio de separacao": None,
         }
         return dic
+
     
     def returnMetadata(self):
         return self.metadata
+
+    
+    def getInterfaceInfo(self):
+        dic = {
+            "keywords-include": ", ".join(self.keywords["include"]),
+            "keywords-exclude": ", ".join(self.keywords["exclude"]),
+            "parameters-include": ", ".join([f"{x}:{self.parameters['include'][x]}" for x in self.parameters['include']]),
+            "parameters-exclude": ", ".join([f"{x}:{self.parameters['exclude'][x]}" for x in self.parameters['exclude']]),
+            "pag-count": self.pag_count,
+            "all-pages": self.all_pages,
+            "more-filters": self.string,
+            "others": ", ".join([f"{x}:{self.others[x]}" for x in self.others]),
+        }
+
+        return dic
+    
+    
+    def toCache(self):
+        dic = {
+            "keywords": self.keywords,
+            "parameters": self.parameters,
+            "pag_count": self.pag_count, 
+            "all_pages": self.all_pages, 
+            "more_filters": self.string,
+            "others": self.others
+        }
+        return dic

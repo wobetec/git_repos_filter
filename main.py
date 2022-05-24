@@ -1,51 +1,72 @@
 from modules.query import Query
 from modules.search import Search
 from modules.results import Result
+from modules.interface import interface
 
-"""
-#######################--> How to use <--#######################
+import json
 
-1) Criar uma instância de Search que atua como buscador
-    s = Search
+class App():
 
-2) Definir as keywor ds e os parameters a serem utilizados(keywords=list, parameters=dict)
-    keywords = {"include":["bioinformatics"], "exclude":[]}
-    parameters = {"include":{"language":"python"}, "exclude":{}}
+    def __init__(self):
+        self.results = {}
+        self.query = None
+        self.search = Search()
+        self.interface = interface.GraphicsInterface()
 
-3) criar uma instância de Query que criará a string a ser usada como query
-    query = Query(keywords, parameters, pag_count=100, all_pages = False)
 
-4) Realizar a busca usando a instância de Search e a de Query e armazenala em um resultado
-    s.get_search(query)
-    r = Result(s)
 
-5) Agora como ler e salvar o resultado:
-    # Para ver a quantidade de resultados
-        print(r.manipulated["data"]["search"]["repositoryCount"])
-    # Para ordenar o resutado por estrelas
-        r.sortByStars()
-    # Para salvar apenas os primeiros
-        r.sliceFirsts(n)
-    # Para salvar o resultado em .json
-        r.toJson(filePath)
-    # Para salvar o resultado em .xlsx
-        r.toExcel(filePath)
-"""
+    def begin(self):
+        self.query, self.results = self.openCache()
+        self.interface.title()
+
+
+    def run(self):
+        self.interface.clearScreen()
+        self.interface.queryShow(self.query)
+        print("")
+        self.interface.resultsShow(self.returnResults())
+        print("")
+        command = self.interface.commandLine()
+        
+    
+    def returnResults(self):
+        return list(self.results.keys())
+
+
+    def openCache(self):
+        with open("./cache/cache.json", "r") as f:
+            file = json.load(f)
+        
+        query = Query(
+                    keywords = file["query"]["keywords"],
+                    parameters = file["query"]["parameters"],
+                    pag_count = file["query"]["pag_count"], 
+                    all_pages = file["query"]["all_pages"], 
+                    more_filters = file["query"]["more_filters"],
+                    others = file["query"]["others"]
+                )
+        
+        results = file["results"]
+
+        return query, results
+
+
+    def saveCache(self):
+        query = self.query.toCache()
+
+        dic = {"query":query, "results":self.results}
+
+        with open("./cache/cache.json", "w") as f:
+            f.write(json.dumps(dic, indent=4))
+
 
 if __name__ == "__main__":
-    s = Search()
+    app = App()
+    app.begin()
+    while True:
+        app.run()
+        pass
 
-    keywords = {"include":["bioinformatics"], "exclude":[]}
-    parameters = {"include":{"language":"python"}, "exclude":{}}
-
-    query = Query(keywords, parameters, pag_count=100, all_pages = False)
-    
-    s.get_search(query)
-    r = Result(s)
-
-    print(r.manipulated["data"]["search"]["repositoryCount"])
-    r.toJson("./results/result.json")
-    r.toExcel("./results/result.xlsx")
-
+    app.end()
 
 

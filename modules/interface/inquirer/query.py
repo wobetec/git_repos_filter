@@ -86,5 +86,4 @@ def run(edit = True, placeholder = {'keyInc': '', 'keyExc': '', 'parInc': '', 'p
     ]
 
     answers = prompt(questions, style=style)
-    print(answers)
     return answers

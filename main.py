@@ -2,6 +2,7 @@ from modules.query import Query
 from modules.search import Search
 from modules.results import Result
 from modules.interface import interface
+from modules.interface import inquirer as inq
 from modules.cliparser.parser import Parser
 
 import json
@@ -70,8 +71,8 @@ class App():
 
     ####################-->query<--######################
     def do_edit(self, arguments):
+        new_query = inq.query.run(placeholder = self.query.getInq())
 
-        pass
 
     ####################-->quit<--######################
     def do_finish(self):

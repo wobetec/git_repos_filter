@@ -116,3 +116,24 @@ class Query():
             "others": self.others
         }
         return dic
+
+    def getInq(self):
+        placeholder = { 'keyInc': ", ".join(self.keywords["include"]),
+                        'keyExc': ", ".join(self.keywords["exclude"]),
+                        'parInc': ", ".join([f"{x}:{self.parameters['include'][x]}" for x in self.parameters['include']]),
+                        'parExc': ", ".join([f"{x}:{self.parameters['exclude'][x]}" for x in self.parameters['exclude']]),
+                        'pag_count': str(self.pag_count),
+                        'all_pages': self.all_pages,
+                        'more_filters': ", ".join(self.string),
+                        'others': ", ".join([f"{x}:{self.others[x]}" for x in self.others])
+                        }
+        return placeholder
+
+    def changeInq(self, answers):
+        self.keywords["include"] = answers["keyInc"].split(", ")
+        self.keywords["exlcude"] = answers["keyExc"].split(", ")
+        self.parameters["include"] = {x.split(':')[0]:x.split(':')[1] for x in answers["parInc"].split(", ")}
+        self.parameters["exlcude"] = {x.split(':')[0]:x.split(':')[1] for x in answers["parExc"].split(", ")}
+        self
+
+

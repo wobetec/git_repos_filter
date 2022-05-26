@@ -2,6 +2,7 @@ from modules.query import Query
 from modules.search import Search
 from modules.results import Result
 from modules.interface import interface
+from modules.cliparser.parser import Parser
 
 import json
 
@@ -11,13 +12,15 @@ class App():
         self.results = {}
         self.query = None
         self.search = Search()
-        self.interface = interface.GraphicsInterface()
+        self.interface = interface.GraphicsInterface() 
+        self.parser = self.Proxy()
+        self.running = True
 
 
 
-    def begin(self):
+    def begin(self, begin=True):
         self.query, self.results = self.openCache()
-        self.interface.title()
+        self.interface.title(begin)
 
 
     def run(self):
@@ -27,6 +30,7 @@ class App():
         self.interface.resultsShow(self.returnResults())
         print("")
         command = self.interface.commandLine()
+        return command
         
     
     def returnResults(self):
@@ -60,12 +64,76 @@ class App():
             f.write(json.dumps(dic, indent=4))
 
 
+    def end(self):
+        self.saveCache()
+        self.interface.title(begin=False)
+
+
+    def finish(self):
+        self.running = False
+    
+    class Proxy(Parser):
+
+        original_tree = {
+            "query":{
+                "type":"class",
+                "edit":{
+                    "type":"function",
+                    "arguments":{
+                        "field":{
+                            "calls":["-f", "--field"],
+                            "must":False,
+                            "type":"str",
+                            "default":"all",
+                            "validator":None
+                        }
+                    },
+                    "do": None,
+                }
+            },
+            "search":{
+                "type":"class",
+                "edit":{
+                    "type":"function",
+                    "arguments":{
+                        "save":{
+                            "calls":["-s", "--save"],
+                            "must":True,
+                            "type":"str",
+                            "default": None,
+                            "validator": None,
+                        }
+                    },
+                    "do": None,
+                }
+            },
+            "results":{
+                "type":"class"
+            },
+            "quit":{
+                "type":"function",
+                "arguments": {},
+                "do": lambda x, y: x.finish()
+                }
+        
+        }
+
+        def __init__(self):
+            self.tree = App.Proxy.original_tree
+            self.args = None
+            self.do = None
+
+
+
 if __name__ == "__main__":
     app = App()
     app.begin()
-    while True:
-        app.run()
-        pass
+    while app.running:
+        command = app.run()
+        path = app.parser.getPath(command)
+        if app.parser.checkPath(path):
+            arguments = app.parser.getArguments(path)
+            app.parser.getDo(path)(app, arguments)
 
     app.end()
 

@@ -1,26 +1,39 @@
-query:
-* create (Pyinquer)
-* edit (Pyinquer)
-    keywords include
-    keywords exclude
-    parameters
-    parameters
-    pag_count
-    all_pages
-    more filters
-    others
+query/search/result
+
+class Main
+
+    class query
+        def edit
+            --field -f 
+                all - default
+                [field]
+
+        def clear
 
 
-* remove (command line)
-* see (comand line)
+    class search 
+        def do
+            --save -s
+                [resultName]
 
+    class result
+        class format
+            def sort
+                --by -b
+                    [option]
+            def slice
+                --from -f
+                    firsts - default
+                    [option]
+                --number -n
+        class save
+            def json
 
-Search
-* do (command line)
+            def excel
+        
+        def see
+            --detail-level -d
 
+    def quit
 
-Results
-* save json (command line)
-* save Excel (command line)
-* see (comand line)
-* format, slice, filter... (Pyinquer)
+    def restart

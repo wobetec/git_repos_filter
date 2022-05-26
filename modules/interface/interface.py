@@ -11,12 +11,16 @@ class GraphicsInterface():
         pass
 
     
-    def title(self):
+    def title(self, begin):
         self.clearScreen()
         f = Figlet(font='slant')
         print(f.renderText("Git Filter"))
-        print("Wellcome to GitFilter! This tool is powred by wobetec.")
-        sleep(3)
+        if begin:
+            print("Wellcome to GitFilter! This tool is powred by wobetec.")
+            sleep(3)
+        else:
+            print("See ya! Thanks for use us.")
+            sleep(2)
 
 
     def queryShow(self, query):
@@ -39,8 +43,9 @@ class GraphicsInterface():
         print("+----------+-----------+-----------+-----------+-----------+-----------+")
 
 
-    def commandLine(self):
+    def commandLine(self, returned = ""):
         print("Terminal('>>>help' to get help):")
+        print(f">>>{returned}")
         command = input(">>>")
         return command
 

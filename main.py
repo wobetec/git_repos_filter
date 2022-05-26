@@ -68,8 +68,13 @@ class App():
         self.saveCache()
         self.interface.title(begin=False)
 
+    ####################-->query<--######################
+    def do_edit(self, arguments):
 
-    def finish(self):
+        pass
+
+    ####################-->quit<--######################
+    def do_finish(self):
         self.running = False
     
     class Proxy(Parser):
@@ -88,7 +93,7 @@ class App():
                             "validator":None
                         }
                     },
-                    "do": None,
+                    "do": lambda x, y: x.do_edit(y),
                 }
             },
             "search":{
@@ -104,7 +109,7 @@ class App():
                             "validator": None,
                         }
                     },
-                    "do": None,
+                    "do": None
                 }
             },
             "results":{
@@ -113,16 +118,13 @@ class App():
             "quit":{
                 "type":"function",
                 "arguments": {},
-                "do": lambda x, y: x.finish()
+                "do": lambda x, y: x.do_finish()
                 }
         
         }
 
         def __init__(self):
             self.tree = App.Proxy.original_tree
-            self.args = None
-            self.do = None
-
 
 
 if __name__ == "__main__":
@@ -134,7 +136,5 @@ if __name__ == "__main__":
         if app.parser.checkPath(path):
             arguments = app.parser.getArguments(path)
             app.parser.getDo(path)(app, arguments)
-
     app.end()
-
 

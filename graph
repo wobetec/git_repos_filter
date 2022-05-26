@@ -6,7 +6,8 @@ class Main
         def edit
             --field -f 
                 all - default
-                [field]
+                [field_name]
+
 
         def clear
 
@@ -15,6 +16,7 @@ class Main
         def do
             --save -s
                 [resultName]
+
 
     class result
         class format
@@ -34,6 +36,9 @@ class Main
         def see
             --detail-level -d
 
-    def quit
 
-    def restart
+
+arguments = {
+    field: all 
+    number: int
+}

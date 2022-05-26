@@ -84,7 +84,39 @@ class Parser():
    
 
     def getArguments(self, path):
-        pass
+        treeSlice = self.tree.copy()
+        pathSlice = path.copy()
+        do = None
+
+        while True:
+            now = list(pathSlice.keys())[0]
+            if now != "arguments":
+                treeSlice = treeSlice[now]
+                pathSlice = pathSlice[now]
+                last = now
+            else:
+                break
+
+        #Get arguments
+        treeSlice = treeSlice["arguments"]
+        pathSlice = pathSlice["arguments"]
+
+        arguments = {}
+
+        for arg in treeSlice.keys():
+            callValue = None
+            for i in treeSlice[arg]["calls"]:
+                try:
+                    callValue = pathSlice[i]
+                    break
+                except KeyError:
+                    continue
+            if callValue == None:
+                arguments[arg] = treeSlice[arg]["default"]
+            else:
+                arguments[arg] = callValue
+            
+        return arguments
 
     
     def getDo(self, path):

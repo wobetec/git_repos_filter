@@ -1,6 +1,3 @@
-modules/token/git_token.txt
-test.py
-query_tests.py
+git_token.txt
 __pycache__
-modules/__pycache__
 results

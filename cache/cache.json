@@ -3,9 +3,15 @@
         "keywords": {
             "include": [
                 "paper",
-                "experiments"
+                "experiments",
+                "scientific"
             ],
-            "exclude": []
+            "exclude": [
+                "framework"
+            ],
+            "exlcude": [
+                ""
+            ]
         },
         "parameters": {
             "include": {
@@ -22,9 +28,9 @@
         "first": {
             "data": {}
         },
-        "empity 1": {},
-        "empity 2": {},
-        "empity 3": {},
-        "empity 4": {}
+        "empity_1": {},
+        "empity_2": {},
+        "empity_3": {},
+        "empity_4": {}
     }
 }

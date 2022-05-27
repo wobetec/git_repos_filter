@@ -1,3 +1,4 @@
+from sre_compile import isstring
 from modules.query import Query
 from modules.search import Search
 from modules.results import Result
@@ -6,11 +7,12 @@ from modules.interface import inquirer as inq
 from modules.cliparser.parser import Parser
 
 import json
+from time import sleep
 
 class App():
 
     def __init__(self):
-        self.results = {}
+        self.results = {"empity_1": {}, "empity_2": {}, "empity_3": {}, "empity_4": {}, "empity_5": {}}
         self.query = None
         self.search = Search()
         self.interface = interface.GraphicsInterface() 
@@ -71,7 +73,19 @@ class App():
 
     ####################-->query<--######################
     def do_edit(self, arguments):
-        new_query = inq.query.run(placeholder = self.query.getInq())
+        print(arguments)
+        if arguments["fields"] == "all":
+            self.interface.clearScreen()
+            new_query = inq.query.run(placeholder = self.query.getInq())
+            print(new_query)
+            self.query.changeInq(new_query)
+        
+    
+    ####################-->search<--######################
+    def do_do(self, arguments):
+        self.search
+
+    ####################-->results<--######################
 
 
     ####################-->quit<--######################
@@ -86,7 +100,7 @@ class App():
                 "edit":{
                     "type":"function",
                     "arguments":{
-                        "field":{
+                        "fields":{
                             "calls":["-f", "--field"],
                             "must":False,
                             "type":"str",
@@ -99,18 +113,25 @@ class App():
             },
             "search":{
                 "type":"class",
-                "edit":{
+                "do":{
                     "type":"function",
                     "arguments":{
-                        "save":{
-                            "calls":["-s", "--save"],
+                        "name":{
+                            "calls":["-n", "--name"],
                             "must":True,
                             "type":"str",
                             "default": None,
-                            "validator": None,
-                        }
+                            "validator": lambda x: type(x) == type("str"),
+                        },
+                        "slot":{
+                            "calls":["-s", "--slot"],
+                            "must":True,
+                            "type":"str",
+                            "default": None,
+                            "validator": lambda x: type(x) == type("str"),
+                        },
                     },
-                    "do": None
+                    "do": 
                 }
             },
             "results":{

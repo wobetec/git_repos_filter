@@ -17,10 +17,10 @@ class GraphicsInterface():
         print(f.renderText("Git Filter"))
         if begin:
             print("Wellcome to GitFilter! This tool is powred by wobetec.")
-            sleep(3)
+            #sleep(3)
         else:
             print("See ya! Thanks for use us.")
-            sleep(2)
+            #sleep(2)
 
 
     def queryShow(self, query):

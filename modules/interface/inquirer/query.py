@@ -52,7 +52,7 @@ def run(edit = True, placeholder = {'keyInc': '', 'keyExc': '', 'parInc': '', 'p
         },
         {
             'type': 'input',
-            'name': 'ParExc',
+            'name': 'parExc',
             'default': placeholder['parExc'],
             'message': 'Parameters to exclude:',
         },

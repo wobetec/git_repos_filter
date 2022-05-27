@@ -131,9 +131,11 @@ class Query():
 
     def changeInq(self, answers):
         self.keywords["include"] = answers["keyInc"].split(", ")
-        self.keywords["exlcude"] = answers["keyExc"].split(", ")
+        self.keywords["exclude"] = answers["keyExc"].split(", ")
         self.parameters["include"] = {x.split(':')[0]:x.split(':')[1] for x in answers["parInc"].split(", ")}
-        self.parameters["exlcude"] = {x.split(':')[0]:x.split(':')[1] for x in answers["parExc"].split(", ")}
-        self
-
+        self.parameters["exclude"] = {x.split(':')[0]:x.split(':')[1] for x in answers["parExc"].split(", ")} if answers["parExc"] != "" else {}
+        self.pag_count = int(answers["pag_count"])
+        self.all_pages = answers["all_pages"]
+        self.string = answers["more_filters"]
+        self.others = {x.split(':')[0]:x.split(':')[1] for x in answers["others"].split(", ")} if answers["parExc"] != "" else {}
 

@@ -58,7 +58,10 @@ class GraphicsInterface():
 
     def showResult(self, result, level=1):
         if level == 1:
-            print("re")
+            print("result = {")
+            print(f"    repository-count: {result.getInfos('repositoryCount')}")
+            print("}")
+        input("Type enter to continue...")
 
 
 if __name__ == '__main__':

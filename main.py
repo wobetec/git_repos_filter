@@ -7,7 +7,6 @@ from modules.interface import inquirer as inq
 from modules.cliparser.parser import Parser
 
 import json
-from time import sleep
 
 class App():
 
@@ -18,7 +17,6 @@ class App():
         self.interface = interface.GraphicsInterface() 
         self.parser = self.Proxy()
         self.running = True
-
 
 
     def begin(self, begin=True):
@@ -52,8 +50,7 @@ class App():
                     more_filters = file["query"]["more_filters"],
                     others = file["query"]["others"]
                 )
-        
-        results = file["results"]
+        results = {x:(Result(dic=file["results"][x]) if file["results"][x] != {} else Result()) for x in file["results"].keys()}
 
         return query, results
 
@@ -61,7 +58,8 @@ class App():
     def saveCache(self):
         query = self.query.toCache()
         saveResults = {x:self.results[x].toJsonCache() for x in self.results.keys()}
-        dic = {"query":query, "results":self.results}
+
+        dic = {"query":query, "results":saveResults}
 
         with open("./cache/cache.json", "w") as f:
             f.write(json.dumps(dic, indent=4))
@@ -86,13 +84,14 @@ class App():
         self.search.get_search(self.query)
         name, slot = arguments["name"][0], arguments["slot"][0]
         self.results.pop(slot)
-        result_temp = Result(self.search)
+        result_temp = Result(search = self.search)
         self.results[name] = result_temp
     
-
     
     ####################-->results<--######################
     def do_see(self, arguments):
+        self.interface.clearScreen()
+        self.interface.showResult(self.results[arguments["slot"][0]])
         pass
 
     ####################-->quit<--######################
@@ -161,7 +160,7 @@ class App():
                             "validator": lambda x: type(x[0]) == type(0),
                         },
                     },
-                    "do": lambda x, y: x.do_do(y),
+                    "do": lambda x, y: x.do_see(y),
                 },
             },
             "quit":{

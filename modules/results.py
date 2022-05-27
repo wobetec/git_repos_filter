@@ -4,15 +4,20 @@ from datetime import datetime
 
 class Result():
 
-    def __init__(self, search = None, dic = None):
-        if search == None:
+    def __init__(self, search = None, dic = {}):
+        if search != None:
             self.metadata = search.metadata
             self.jsonOriginal = search.response
             self.manipulated = self.jsonOriginal
-        else:
-            self.metadata = dic["metadata"]
-            self.JsonOriginal = dic
+        elif dic != {}:
+            print(dic)
+            self.metadata = dic["data"]["search"].pop("metadata")
+            self.jsonOriginal = dic
             self.manipulated = self.jsonOriginal
+        else:
+            self.metadata = None
+            self.jsonOriginal = None
+            self.manipulated = None
 
 
     #######################-->Sort<--#######################
@@ -40,8 +45,11 @@ class Result():
     
 
     def toJsonCache(self):
-        self.manipulated["data"]["search"]["metadata"] = self.metadata
-            
+        if self.metadata != None:
+            self.manipulated["data"]["search"]["metadata"] = self.metadata
+        else:
+            self.manipulated = {}
+
         return self.manipulated
 
 
@@ -63,6 +71,10 @@ class Result():
 
         writer.save()
 
+    #Get infos
+    def getInfos(self, parameter):
+        if parameter == "repositoryCount":
+            return self.manipulated["data"]["search"]["repositoryCount"]
 
     
 

@@ -56,6 +56,10 @@ class GraphicsInterface():
         else:
             os.system('cls')
 
+    def showResult(self, result, level=1):
+        if level == 1:
+            print("re")
+
 
 if __name__ == '__main__':
     pass

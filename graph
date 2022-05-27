@@ -1,44 +1,24 @@
-query/search/result
-
-class Main
-
-    class query
-        def edit
-            --field -f 
-                all - default
-                [field_name]
-
-
-        def clear
-
-
-    class search 
-        def do
-            --save -s
-                [resultName]
-
-
-    class result
-        class format
-            def sort
-                --by -b
-                    [option]
-            def slice
-                --from -f
-                    firsts - default
-                    [option]
-                --number -n
-        class save
-            def json
-
-            def excel
+class query
+    def clear
+    
         
-        def see
-            --detail-level -d
+class result
+    class format
+        def sort
+            --by -b
+                [option]
+        def slice
+            --from -f
+                firsts - default
+                [option]
+            --number -n
 
+    class save
+        def json
 
+        def excel
+    
 
-arguments = {
-    field: all 
-    number: int
-}
+    def see
+        --slot -s
+        --detail-level -dl

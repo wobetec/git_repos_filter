@@ -60,7 +60,7 @@ class App():
 
     def saveCache(self):
         query = self.query.toCache()
-
+        saveResults = {x:self.results[x].toJsonCache() for x in self.results.keys()}
         dic = {"query":query, "results":self.results}
 
         with open("./cache/cache.json", "w") as f:
@@ -83,10 +83,17 @@ class App():
     
     ####################-->search<--######################
     def do_do(self, arguments):
-        self.search
+        self.search.get_search(self.query)
+        name, slot = arguments["name"][0], arguments["slot"][0]
+        self.results.pop(slot)
+        result_temp = Result(self.search)
+        self.results[name] = result_temp
+    
 
+    
     ####################-->results<--######################
-
+    def do_see(self, arguments):
+        pass
 
     ####################-->quit<--######################
     def do_finish(self):
@@ -121,21 +128,41 @@ class App():
                             "must":True,
                             "type":"str",
                             "default": None,
-                            "validator": lambda x: type(x) == type("str"),
+                            "validator": lambda x: type(x[0]) == type("str"),
                         },
                         "slot":{
                             "calls":["-s", "--slot"],
                             "must":True,
                             "type":"str",
                             "default": None,
-                            "validator": lambda x: type(x) == type("str"),
+                            "validator": lambda x: type(x[0]) == type("str"),
                         },
                     },
-                    "do": 
+                    "do": lambda x, y: x.do_do(y),
                 }
             },
             "results":{
-                "type":"class"
+                "type":"class",
+                "see":{
+                    "type":"function",
+                    "arguments":{
+                        "slot":{
+                            "calls":["-s", "--slot"],
+                            "must":True,
+                            "type":"str",
+                            "default": None,
+                            "validator": lambda x: type(x[0]) == type("str"),
+                        },
+                        "detail-level":{
+                            "calls":["-d", "--detail-level"],
+                            "must":False,
+                            "type": "int",
+                            "default": 1,
+                            "validator": lambda x: type(x[0]) == type(0),
+                        },
+                    },
+                    "do": lambda x, y: x.do_do(y),
+                },
             },
             "quit":{
                 "type":"function",

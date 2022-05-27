@@ -4,10 +4,15 @@ from datetime import datetime
 
 class Result():
 
-    def __init__(self, search):
-        self.metadata = search.metadata
-        self.jsonOriginal = search.response
-        self.manipulated = self.jsonOriginal
+    def __init__(self, search = None, dic = None):
+        if search == None:
+            self.metadata = search.metadata
+            self.jsonOriginal = search.response
+            self.manipulated = self.jsonOriginal
+        else:
+            self.metadata = dic["metadata"]
+            self.JsonOriginal = dic
+            self.manipulated = self.jsonOriginal
 
 
     #######################-->Sort<--#######################
@@ -32,6 +37,12 @@ class Result():
             
         with open(filePath, "w") as f:
             f.write(json.dumps(self.manipulated, indent=4))
+    
+
+    def toJsonCache(self):
+        self.manipulated["data"]["search"]["metadata"] = self.metadata
+            
+        return self.manipulated
 
 
     def toExcel(self, filePath, itens = ["name", "url", "star"], metadata = True):

@@ -14,7 +14,7 @@ class Result():
     def sortByStars(self):
         nodes = self.jsonOriginal["data"]["search"]["nodes"]
         new_list = sorted(nodes, key=lambda node: node["stargazers"]["totalCount"], reverse=True)
-        self.manipulated = new_list["data"]["search"]["nodes"] = new_list
+        self.manipulated["data"]["search"]["nodes"] = new_list
         self.metadata["Criterio de separacao"] =  "stars"
 
 

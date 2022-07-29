@@ -38,10 +38,13 @@ if __name__ == "__main__":
     keywords = {"include":["bioinformatics"], "exclude":[]}
     parameters = {"include":{"language":"python"}, "exclude":{}}
 
-    query = Query(keywords, parameters, pag_count=100, all_pages = False)
-    
+    query = Query(keywords, parameters, pag_count=5, all_pages = False)
+
     s.get_search(query)
     r = Result(s)
+
+    r.sortByStars()
+    r.sliceFirsts(100)
 
     print(r.manipulated["data"]["search"]["repositoryCount"])
     r.toJson("./results/result.json")
